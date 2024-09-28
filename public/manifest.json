@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "My tab extension",
+    "description": "New tab manager Extension",
+    "version": "1.0",
+    "author": "Chaitanya Lingayat",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.svg"
+    }
+}
