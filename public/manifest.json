@@ -7,8 +7,25 @@
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
+    "permissions": [
+        "scripting",
+        "storage"
+    ],
     "action": {
         "default_popup": "index.html",
         "default_icon": "icon.svg"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ],
+            "all_frames": true,
+            "css": [
+                "index.css"
+            ],
+            "run_at": "document_start"
+        }
+    ]
 }
