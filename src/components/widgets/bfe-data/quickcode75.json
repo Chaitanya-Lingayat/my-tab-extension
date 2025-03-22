@@ -1,0 +1,120 @@
+{
+    "pageProps": {
+        "questions": [
+            {
+                "title": "Two Sum",
+                "links": {
+                    "leetCode": "https://leetcode.com/problems/two-sum"
+                },
+                "description": "Given an integer array, find the pair that sum to target number.",
+                "costExplanation": "N - length of array",
+                "choiceSets": [
+                    {
+                        "choices": {
+                            "time": [
+                                "𝑂(1)",
+                                "𝑂(logN)",
+                                "𝑂(N)",
+                                "𝑂(NlogN)",
+                                "𝑂(N²)"
+                            ],
+                            "space": [
+                                "𝑂(1)",
+                                "𝑂(logN)",
+                                "𝑂(N)",
+                                "𝑂(NlogN)",
+                                "𝑂(N²)"
+                            ]
+                        },
+                        "answers": [
+                            {
+                                "description": "Brute Force - find all the pairs and compare.",
+                                "time": "𝑂(N²)",
+                                "space": "𝑂(1)"
+                            },
+                            {
+                                "description": "For a number in the array, we want to check the existence of the pairing number, so we can use a Set to hold the numbers to improve the search into 𝑂(1) time. This could be done in even one pass.\n",
+                                "time": "𝑂(N)",
+                                "space": "𝑂(N)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Valid Parentheses",
+                "links": {
+                    "leetCode": "https://leetcode.com/problems/valid-parentheses"
+                },
+                "description": "Given an string which might contain parentheses & brackets like <code>'()abc{]}123'</code>, check if their pairings are valid.",
+                "costExplanation": "N - length of string",
+                "choiceSets": [
+                    {
+                        "choices": {
+                            "time": [
+                                "𝑂(1)",
+                                "𝑂(logN)",
+                                "𝑂(N)",
+                                "𝑂(NlogN)",
+                                "𝑂(N²)",
+                                "𝑂(N³)"
+                            ],
+                            "space": [
+                                "𝑂(1)",
+                                "𝑂(logN)",
+                                "𝑂(N)",
+                                "𝑂(NlogN)",
+                                "𝑂(N²)",
+                                "𝑂(N³)"
+                            ]
+                        },
+                        "answers": [
+                            {
+                                "description": "If valid, the closest opening parenthesis before the first closing parenthesis must match and it should not alter the status if the most inner pair is removed.\n  Stack is perfect for this question - push the openings, and try to pop on meeting closing parenthesis. If pairings are valid, the stack must be empty in the end.\n  ",
+                                "time": "𝑂(N)",
+                                "space": "𝑂(N)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Merge Two Sorted Linked Lists",
+                "links": {
+                    "leetCode": "https://leetcode.com/problems/merge-two-sorted-lists"
+                },
+                "description": "Per title.",
+                "costExplanation": "N - length of linked list",
+                "choiceSets": [
+                    {
+                        "choices": {
+                            "time": [
+                                "𝑂(1)",
+                                "𝑂(logN)",
+                                "𝑂(N)",
+                                "𝑂(NlogN)",
+                                "𝑂(N²)"
+                            ],
+                            "space": [
+                                "𝑂(1)",
+                                "𝑂(logN)",
+                                "𝑂(N)",
+                                "𝑂(NlogN)",
+                                "𝑂(N²)"
+                            ]
+                        },
+                        "answers": [
+                            {
+                                "description": "Since both are sorted, we only need to compare the heads of both lists, and put the smaller one into the final list. We can achieve this by 2 cursors. Remember to use a false head to handle linked list more easily.",
+                                "time": "𝑂(N)",
+                                "space": "𝑂(1)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "upsellPremium": true
+    },
+    "__N_SSP": true
+}
