@@ -29,21 +29,7 @@
             "128": "favicon-128x128.png"
         }
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://*/*",
-                "http://*/*"
-            ],
-            "all_frames": true,
-            "css": [
-                "index.css"
-            ],
-            "run_at": "document_start"
-        }
-    ],
     "theme_color": "#083548",
-    "background_color": "#ffffff",
     "display": "standalone",
     "start_url": "/"
 }
