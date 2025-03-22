@@ -1,4 +1,4 @@
-# Smart Tab - Modern Tab Management Extension
+# Smart Tab - Built for daily task and interview preparation
 
 [![Deployed on Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://smart-tab.netlify.app/)
 
