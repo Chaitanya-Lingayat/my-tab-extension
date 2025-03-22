@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# Smart Tab - Modern Tab Management Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Deployed on Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)](https://smart-tab.netlify.app/)
 
-Currently, two official plugins are available:
+A modern, intuitive tab management application built with React, TypeScript, and Vite. Smart Tab helps you organize and manage your browser tabs efficiently with a beautiful and user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- **Modern UI/UX**: Clean and intuitive interface built with React and styled using Tailwind CSS
+- **Type Safety**: Built with TypeScript for enhanced code reliability and developer experience
+- **Fast Development**: Powered by Vite for lightning-fast development and build times
+- **Responsive Design**: Works seamlessly across different screen sizes
+- **State Management**: Efficient state management using React Context and stores
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Live Demo
 
-- Configure the top-level `parserOptions` property like this:
+Visit the live application at: [https://smart-tab.netlify.app/](https://smart-tab.netlify.app/)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Development Tools**:
+  - ESLint for code linting
+  - PostCSS for CSS processing
+  - SWC for fast refresh
+
+## 🏗️ Project Structure
+
+```
+src/
+├── assets/      # Static assets
+├── components/  # React components
+├── context/     # React context providers
+├── lib/         # Utility functions and helpers
+├── stores/      # State management
+└── styles/      # Global styles and Tailwind configuration
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. Clone the repository
+```bash
+git clone <repository-url>
 ```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+4. Build for production
+```bash
+npm run build
+```
+
+## 📝 Environment Variables
+
+The application uses environment variables for configuration. Create a `.env` file in the root directory with the following variables:
+
+```env
+# Add your environment variables here
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
