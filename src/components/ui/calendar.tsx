@@ -18,31 +18,31 @@ function Calendar({
       showOutsideDays={showOutsideDays}
       className={cn("p-1 sm:p-2 w-full h-full", className)}
       classNames={{
-        months: "flex flex-col space-y-2 sm:space-y-4",
-        month: "space-y-2 sm:space-y-4 w-full",
-        caption: "flex justify-center pt-1 relative items-center",
-        caption_label: "text-xs sm:text-sm font-medium",
+        months: "flex flex-col space-y-1",
+        month: "space-y-1 w-full",
+        caption: "flex justify-center relative items-center h-8",
+        caption_label: "text-xs font-medium",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
           buttonVariants({ variant: "outline" }),
-          "h-6 w-6 sm:h-7 sm:w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+          "h-5 w-5 bg-transparent p-0 opacity-50 hover:opacity-100"
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
-        table: "w-full border-collapse space-y-1",
+        table: "w-full border-collapse",
         head_row: "flex w-full justify-between",
         head_cell:
-          "text-muted-foreground rounded-md flex-1 font-normal text-[0.7rem] sm:text-[0.8rem] px-1",
-        row: "flex w-full mt-1 sm:mt-2 justify-between",
+          "text-muted-foreground rounded-md flex-1 font-normal text-[0.6rem] px-0",
+        row: "flex w-full justify-between mt-0.5",
         cell: cn(
-          "text-center text-sm relative flex-1 [&:has([aria-selected].day-range-end)]:rounded-r-md",
+          "text-center relative flex-1 [&:has([aria-selected].day-range-end)]:rounded-r-md",
           "[&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent",
           "first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md",
-          "focus-within:relative focus-within:z-20 aspect-square p-0"
+          "focus-within:relative focus-within:z-20 p-0 aspect-square"
         ),
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "w-full h-full p-0 text-xs sm:text-sm font-normal aria-selected:opacity-100"
+          "w-full h-full p-0 text-[0.7rem] font-normal aria-selected:opacity-100"
         ),
         day_range_end: "day-range-end",
         day_selected:
@@ -57,8 +57,8 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ }) => <ChevronLeft className="h-3 w-3 sm:h-4 sm:w-4" />,
-        IconRight: ({ }) => <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />,
+        IconLeft: ({ }) => <ChevronLeft className="h-3 w-3" />,
+        IconRight: ({ }) => <ChevronRight className="h-3 w-3" />,
       }}
       {...props}
     />

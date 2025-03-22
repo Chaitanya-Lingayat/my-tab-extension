@@ -119,7 +119,7 @@ export function BigFrontEndWidget() {
     };
 
     return (
-        <Card className="w-full h-full bg-transparent">
+        <Card className="w-full h-full bg-transparent min-h-[400px]">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <div className="flex items-center space-x-2">
                     <h3 className="font-bold text-lg">BigFrontEnd.dev</h3>

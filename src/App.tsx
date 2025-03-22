@@ -16,7 +16,7 @@ function App() {
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
       <ThemeToggle />
       {/* <GoogleAuthenticator /> */}
-      <div className='flex flex-col w-full h-[100dvh] py-2 px-2 sm:py-4 sm:px-4 md:px-8 gap-2 sm:gap-3 overflow-y-auto'>
+      <div className='flex flex-col w-full h-[100dvh] py-2 px-2 sm:py-4 sm:px-4 md:px-8 gap-2 sm:gap-3 overflow-y-auto pb-24'>
         <TypingAnimation
           className="text-xl sm:text-2xl md:text-4xl font-bold text-black dark:text-white py-1 px-1 sm:py-2 sm:px-2"
           text="Welcome Chaitanya"

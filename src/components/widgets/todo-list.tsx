@@ -46,7 +46,7 @@ const TodoList: React.FC = () => {
     };
 
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center min-h-[400px]">
             <div className="p-3 sm:p-6 rounded-lg w-full sm:w-[90%]">
                 <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-0 mb-4">
                     <input
