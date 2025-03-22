@@ -42,7 +42,7 @@
             "run_at": "document_start"
         }
     ],
-    "theme_color": "#A07CFE",
+    "theme_color": "#2563eb",
     "background_color": "#ffffff",
     "display": "standalone",
     "start_url": "/"
