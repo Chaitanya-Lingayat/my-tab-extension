@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createSwapy } from 'swapy';
 import TodoList from '~/components/widgets/todo-list';
 import { Calendar } from '../../ui/calendar';
 import { MagicCard } from '../../ui/magic-card';
 import { LeetCodeWidget } from '../LeetCodeWidget';
+import { GripVertical } from 'lucide-react';
 
 export let swapy: any;
 
@@ -74,29 +75,50 @@ const sections = [
 const SwapBlocks = () => {
     const swapBlocksRef = useRef<HTMLDivElement>(null);
     const isSwapyInitialized = useRef(false);
+    const [isDragEnabled, setIsDragEnabled] = useState(false);
 
     useEffect(() => {
         if (swapBlocksRef.current && !isSwapyInitialized.current) {
             swapy = createSwapy(swapBlocksRef.current, {
                 animation: 'dynamic'
             });
-            swapy.enable(true);
-            isSwapyInitialized.current = false;
+            swapy.enable(false);
+            isSwapyInitialized.current = true;
         }
     }, []);
 
+    useEffect(() => {
+        if (swapy) {
+            swapy.enable(isDragEnabled);
+        }
+    }, [isDragEnabled]);
+
     return (
-        <div ref={swapBlocksRef} className="w-full px-1">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                {sections.map((section) => (
-                    <div key={section.id} className={`${section.id} w-full`} data-swapy-slot={section.slot}>
-                        <div className={`content-${section.item} w-full`} data-swapy-item={section.item}>
-                            <MagicCard>
-                                {section.content}
-                            </MagicCard>
+        <div className="w-full">
+            <div className="flex items-center justify-end mb-2 px-1">
+                <button
+                    onClick={() => setIsDragEnabled(!isDragEnabled)}
+                    className={`rounded-full p-2 transition-colors duration-200 ${isDragEnabled
+                        ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                        : 'bg-muted hover:bg-muted/90'
+                        }`}
+                    title={isDragEnabled ? 'Disable drag mode' : 'Enable drag mode'}
+                >
+                    <GripVertical className="h-4 w-4" />
+                </button>
+            </div>
+            <div ref={swapBlocksRef} className="w-full px-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                    {sections.map((section) => (
+                        <div key={section.id} className={`${section.id} w-full`} data-swapy-slot={section.slot}>
+                            <div className={`content-${section.item} w-full`} data-swapy-item={section.item}>
+                                <MagicCard>
+                                    {section.content}
+                                </MagicCard>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
