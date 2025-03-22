@@ -20,6 +20,8 @@ interface DailyProblem {
     examples: Example[];
 }
 
+const STORAGE_KEY = 'leetcode-problem';
+
 export function LeetCodeWidget() {
     const [problem, setProblem] = useState<DailyProblem | null>(null);
     const [loading, setLoading] = useState(true);
@@ -28,8 +30,22 @@ export function LeetCodeWidget() {
     const categories = ['All', ...getCategories()];
 
     useEffect(() => {
-        handleRefresh();
-    }, [selectedCategory]);
+        // Load saved problem from localStorage on initial mount
+        const savedProblem = localStorage.getItem(STORAGE_KEY);
+        if (savedProblem) {
+            setProblem(JSON.parse(savedProblem));
+            setLoading(false);
+        } else {
+            handleRefresh();
+        }
+    }, []);
+
+    // Update localStorage whenever problem changes
+    useEffect(() => {
+        if (problem) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(problem));
+        }
+    }, [problem]);
 
     const getDifficultyColor = (difficulty: string) => {
         switch (difficulty.toLowerCase()) {
@@ -47,16 +63,22 @@ export function LeetCodeWidget() {
     const handleRefresh = () => {
         setLoading(true);
         setTimeout(() => {
+            let newProblem;
             if (selectedCategory === 'All') {
-                setProblem(getRandomProblem());
+                newProblem = getRandomProblem();
             } else {
                 const categoryProblems = getProblemsByCategory(selectedCategory);
-                const randomProblem = categoryProblems[Math.floor(Math.random() * categoryProblems.length)];
-                setProblem(randomProblem);
+                newProblem = categoryProblems[Math.floor(Math.random() * categoryProblems.length)];
             }
+            setProblem(newProblem);
             setLoading(false);
             setShowExamples(true);
         }, 300);
+    };
+
+    const handleCategoryChange = (category: string) => {
+        setSelectedCategory(category);
+        handleRefresh();
     };
 
     return (
@@ -67,7 +89,7 @@ export function LeetCodeWidget() {
                     <select
                         className="text-sm bg-transparent border rounded px-1 py-1 w-full sm:w-auto"
                         value={selectedCategory}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        onChange={(e) => handleCategoryChange(e.target.value)}
                     >
                         {categories.map((category) => (
                             <option key={category} value={category}>
