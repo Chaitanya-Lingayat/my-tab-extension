@@ -60,7 +60,7 @@ export function LeetCodeWidget() {
     };
 
     return (
-        <Card className="w-full h-full">
+        <Card className="w-full h-full bg-transparent">
             <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0 pb-2">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full sm:w-auto">
                     <div className="font-bold text-base">Blind 75</div>
