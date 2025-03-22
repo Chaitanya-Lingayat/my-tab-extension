@@ -15,10 +15,10 @@ const WeatherCard = ({ city, weatherType, temperature, icon }: WeatherCardProps)
         >
             <div className="flex flex-row justify-between items-center gap-2">
                 <div className="flex flex-col justify-between">
-                    <p className="text-base sm:text-md font-semibold text-black dark:text-white">{city}</p>
-                    <p className="text-xs sm:text-sm text-black dark:text-white">{weatherType}</p>
+                    <p className="text-base sm:text-md font-semibold text-black dark:text-white whitespace-nowrap">{city}</p>
+                    <p className="text-xs sm:text-sm text-black dark:text-white whitespace-nowrap">{weatherType}</p>
                     {/* <p className="text-xs">{day}</p> */}
-                    <p className="text-lg sm:text-md font-bold text-black dark:text-white">{temperature}°</p>
+                    <p className="text-lg sm:text-md font-bold text-black dark:text-white whitespace-nowrap">{temperature}°</p>
                     {/* <p className="text-xs">{tempFahrenheit} F</p> */}
                 </div>
                 <div className="flex flex-col justify-between">
