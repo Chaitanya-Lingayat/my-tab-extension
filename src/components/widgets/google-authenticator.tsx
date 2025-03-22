@@ -57,20 +57,20 @@ const GoogleAuthenticator = () => {
     };
 
     return (
-        <div className='absolute top-20 right-20'>
+        <div className='absolute top-4 sm:top-20 right-4 sm:right-20 z-10'>
             {isSignedIn ? (
                 <button
                     onClick={handleSignoutClick}
-                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base bg-red-500 text-white rounded-md hover:bg-red-600"
                 >
                     Sign Out
                 </button>
             ) : (
                 <button
                     onClick={handleAuthClick}
-                    className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base bg-blue-500 text-white rounded-md hover:bg-blue-600"
                 >
-                    Sign In with Google
+                    Sign In
                 </button>
             )}
         </div>

@@ -19,18 +19,18 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full max-w-full sm:max-w-[300px]">
             <div className="p-2">
                 {events.map((event) => (
-                    <div key={event.id} className="p-0.5">
-                        <h3 className="text-sm font-semibold text-accent dark:text-accent">
+                    <div key={event.id} className="mb-2 last:mb-0">
+                        <h3 className="text-sm font-semibold text-accent dark:text-accent break-words">
                             {event.summary || 'No Title'}
                         </h3>
-                        <p className="text-white dark:text-white text-xs">
+                        <p className="text-white dark:text-white text-xs break-words">
                             {formatEventTime(event.start)} - {formatEventTime(event.end)}
                         </p>
                         {event.location && (
-                            <p className="text-white dark:text-white text-xs">
+                            <p className="text-white dark:text-white text-xs break-words">
                                 <span className="font-semibold">Location:</span> {event.location}
                             </p>
                         )}
