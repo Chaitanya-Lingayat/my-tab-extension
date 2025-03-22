@@ -4,6 +4,7 @@ import TodoList from '~/components/widgets/todo-list';
 import { Calendar } from '../../ui/calendar';
 import { MagicCard } from '../../ui/magic-card';
 import { LeetCodeWidget } from '../LeetCodeWidget';
+import { BigFrontEndWidget } from '../BigFrontEndWidget';
 import { GripVertical } from 'lucide-react';
 
 export let swapy: any;
@@ -14,6 +15,12 @@ const sections = [
         slot: 'qux',
         item: 'd',
         content: <div className="w-full overflow-x-hidden"><LeetCodeWidget /></div>
+    },
+    {
+        id: 'section-5',
+        slot: 'quux',
+        item: 'e',
+        content: <div className="w-full overflow-x-hidden"><BigFrontEndWidget /></div>
     },
     {
         id: 'section-3',

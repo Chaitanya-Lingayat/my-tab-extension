@@ -1,0 +1,234 @@
+{
+    "pageProps": {
+        "tags": [],
+        "items": [
+            {
+                "createdAt": 1646907918,
+                "id": 1,
+                "permalink": "The-React-Counter",
+                "title": "1. the React Counter app",
+                "tags": "React",
+                "tried": 24126,
+                "accepted": 16068,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 115
+            },
+            {
+                "createdAt": 1646907930,
+                "id": 2,
+                "permalink": "usetimeout",
+                "title": "2. useTimeout()",
+                "tags": "React Hooks",
+                "tried": 43559,
+                "accepted": 9170,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [
+                    {
+                        "id": 1,
+                        "name": "TikTok",
+                        "logo": "https://r2.bfe.dev/img/tiktok.svg",
+                        "alias": "ByteDance"
+                    }
+                ],
+                "likes": 67
+            },
+            {
+                "createdAt": 1646907612,
+                "id": 3,
+                "permalink": "useIsFirstRender",
+                "title": "3. useIsFirstRender()",
+                "tags": "React Hooks",
+                "tried": 21486,
+                "accepted": 8768,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 37
+            },
+            {
+                "createdAt": 1646907650,
+                "id": 4,
+                "permalink": "useSWR-1",
+                "title": "4. useSWR() I",
+                "tags": "React Hooks",
+                "tried": 16491,
+                "accepted": 3294,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [],
+                "likes": 14
+            },
+            {
+                "createdAt": 1646907689,
+                "id": 5,
+                "permalink": "usePrevious",
+                "title": "5. usePrevious()",
+                "tags": "React Hooks",
+                "tried": 13669,
+                "accepted": 6182,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 23
+            },
+            {
+                "createdAt": 1646907727,
+                "id": 6,
+                "permalink": "useHover",
+                "title": "6. useHover()",
+                "tags": "React Hooks",
+                "tried": 20122,
+                "accepted": 3777,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [],
+                "likes": 19
+            },
+            {
+                "createdAt": 1646518781,
+                "id": 7,
+                "permalink": "useToggle",
+                "title": "7. useToggle()",
+                "tags": "React Hooks",
+                "tried": 9845,
+                "accepted": 5253,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 15
+            },
+            {
+                "createdAt": 1646907795,
+                "id": 8,
+                "permalink": "useDebounce",
+                "title": "8. useDebounce()",
+                "tags": "React Hooks",
+                "tried": 11130,
+                "accepted": 4467,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 13
+            },
+            {
+                "createdAt": 1646907819,
+                "id": 9,
+                "permalink": "useEffectOnce",
+                "title": "9. useEffectOnce()",
+                "tags": "React Hooks",
+                "tried": 12545,
+                "accepted": 4851,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 9
+            },
+            {
+                "createdAt": 1646907855,
+                "id": 10,
+                "permalink": "phone-number-input",
+                "title": "10. phone number input",
+                "tags": "React",
+                "tried": 9660,
+                "accepted": 2502,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [
+                    {
+                        "id": 3,
+                        "name": "Stripe",
+                        "logo": "https://r2.bfe.dev/img/stripe.svg"
+                    },
+                    {
+                        "id": 22,
+                        "name": "LeetCode",
+                        "logo": "https://r2.bfe.dev/img/leetcode.svg"
+                    }
+                ],
+                "likes": 30
+            },
+            {
+                "createdAt": 1647613175,
+                "id": 11,
+                "permalink": "useFocus",
+                "title": "11. useFocus()",
+                "tags": "React Hooks",
+                "tried": 12924,
+                "accepted": 2884,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [],
+                "likes": 18
+            },
+            {
+                "createdAt": 1658594886,
+                "id": 12,
+                "permalink": "useArray",
+                "title": "12. useArray()",
+                "tags": "React Hooks",
+                "tried": 11591,
+                "accepted": 2907,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [],
+                "likes": 11
+            },
+            {
+                "createdAt": 1666819899,
+                "id": 13,
+                "permalink": "proxy-state-valtio",
+                "title": "13. proxy-state valtio",
+                "tags": "React",
+                "tried": 1965,
+                "accepted": 300,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [],
+                "likes": 11
+            },
+            {
+                "createdAt": 1666910055,
+                "id": 14,
+                "permalink": "implement-useismounted",
+                "title": "14. implement useIsMounted()",
+                "tags": "React Hooks",
+                "tried": 6829,
+                "accepted": 2852,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 6
+            },
+            {
+                "createdAt": 1670119238,
+                "id": 15,
+                "permalink": "useclickoutside",
+                "title": "15. useClickOutside()",
+                "tags": "React Hooks",
+                "tried": 10324,
+                "accepted": 3130,
+                "difficulty": "easy",
+                "isNew": false,
+                "companies": [],
+                "likes": 16
+            },
+            {
+                "createdAt": 1691850954,
+                "id": 16,
+                "permalink": "useUpdateEffect",
+                "title": "16. useUpdateEffect()",
+                "tags": "React Hooks",
+                "tried": 10065,
+                "accepted": 2467,
+                "difficulty": "medium",
+                "isNew": false,
+                "companies": [],
+                "likes": 10
+            }
+        ]
+    },
+    "__N_SSP": true
+}
