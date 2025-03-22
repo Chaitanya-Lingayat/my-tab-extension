@@ -12,7 +12,7 @@ import Marquee from "~/components/ui/marquee";
 import { BorderBeam } from "../ui/border-beam";
 import GoogleEvents from "../widgets/google-events";
 
-const files = [
+export const files = [
   {
     name: "bitcoin.pdf",
     body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",

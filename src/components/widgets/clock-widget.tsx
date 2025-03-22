@@ -28,9 +28,9 @@ const ClockWidget = () => {
     };
 
     return (
-        <div className="dark:text-white text-black rounded-lg py-2 px-1 w-56">
-            <p className="text-4xl font-bold text-accent">{formatTime(time)}</p>
-            <p className="text-l mt-1">{formatDate(time)}</p>
+        <div className="dark:text-white text-black rounded-lg py-2 px-1 w-full sm:w-56">
+            <p className="text-2xl sm:text-4xl font-bold text-accent">{formatTime(time)}</p>
+            <p className="text-sm sm:text-l mt-1">{formatDate(time)}</p>
         </div>
     );
 };
