@@ -97,11 +97,11 @@ export function LeetCodeWidget() {
                         <div className="text-base sm:text-sm text-gray-600 dark:text-gray-400">
                             {problem.statement}
                         </div>
-                        <div className="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-2">
+                        <div className="flex items-center justify-start">
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                className="text-sm sm:text-xs text-gray-500 p-0 h-8 sm:h-6 w-full sm:w-auto justify-center sm:justify-start"
+                                className="text-sm sm:text-xs text-gray-500 p-0 h-8 sm:h-6 justify-start"
                                 onClick={() => setShowExamples(!showExamples)}
                             >
                                 {showExamples ? (
@@ -110,15 +110,6 @@ export function LeetCodeWidget() {
                                     <ChevronDown className="h-4 w-4 mr-1" />
                                 )}
                                 Examples
-                            </Button>
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                className="flex-shrink-0 w-full sm:w-auto h-8 sm:h-6 text-sm sm:text-xs"
-                                onClick={() => window.open(`https://leetcode.com/problems/${problem.titleSlug}`, '_blank')}
-                            >
-                                Solve
-                                <ExternalLink className="w-4 h-4 ml-2" />
                             </Button>
                         </div>
                         {showExamples && problem.examples && problem.examples.length > 0 && (
@@ -143,6 +134,17 @@ export function LeetCodeWidget() {
                                 ))}
                             </div>
                         )}
+                        <div className="mt-4">
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="w-full h-8 sm:h-6 text-sm sm:text-xs"
+                                onClick={() => window.open(`https://leetcode.com/problems/${problem.titleSlug}`, '_blank')}
+                            >
+                                Solve
+                                <ExternalLink className="w-4 h-4 ml-2" />
+                            </Button>
+                        </div>
                     </div>
                 ) : (
                     <div className="text-base sm:text-sm text-gray-500">Failed to load problem</div>
