@@ -3,7 +3,6 @@ import { createSwapy } from 'swapy';
 import TodoList from '~/components/widgets/todo-list';
 import { Calendar } from '../../ui/calendar';
 import { MagicCard } from '../../ui/magic-card';
-import GoogleEvents from '../google-events';
 import { LeetCodeWidget } from '../LeetCodeWidget';
 
 export let swapy: any;

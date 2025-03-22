@@ -1,8 +1,8 @@
+import { ChevronDown, ChevronUp, ExternalLink, RefreshCw } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader } from '../ui/card';
 import { Button } from '../ui/button';
-import { ExternalLink, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react';
-import { BLIND_75_PROBLEMS, getCategories, getProblemsByCategory, getRandomProblem } from './leetcode-problems';
+import { Card, CardContent, CardHeader } from '../ui/card';
+import { getCategories, getProblemsByCategory, getRandomProblem } from './leetcode-problems';
 
 interface Example {
     input: string;
