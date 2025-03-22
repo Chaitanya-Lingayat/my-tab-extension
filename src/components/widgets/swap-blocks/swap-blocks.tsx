@@ -81,7 +81,7 @@ const SwapBlocks = () => {
                 animation: 'dynamic'
             });
             swapy.enable(true);
-            isSwapyInitialized.current = true;
+            isSwapyInitialized.current = false;
         }
     }, []);
 
