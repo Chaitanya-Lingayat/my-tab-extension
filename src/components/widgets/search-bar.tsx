@@ -1,5 +1,5 @@
-import { useState, KeyboardEvent, useEffect, useRef } from 'react';
-import { Search, Command, Bot, Brain, Search as SearchIcon, Briefcase, Laptop, BookOpen, Zap, Mail, FolderOpen, FileText, Table, Presentation, Duck, Youtube, Lightbulb } from 'lucide-react';
+import { BookOpen, Bot, Brain, Briefcase, Command, FileText, FolderOpen, Laptop, Lightbulb, Mail, Presentation, Search, Search as SearchIcon, Table, Youtube, Zap } from 'lucide-react';
+import { KeyboardEvent, useEffect, useRef, useState } from 'react';
 
 interface SearchEngine {
     prefix: string;
