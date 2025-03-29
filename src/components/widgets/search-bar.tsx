@@ -45,8 +45,10 @@ const SearchBar = () => {
 
     // Auto focus the input when component mounts
     useEffect(() => {
-        inputRef.current?.focus();
-    }, []);
+        setTimeout(() => {
+            inputRef.current?.focus();
+        }, 500);
+    }, [inputRef]);
 
     // Add global keyboard shortcut for Command/Ctrl + K
     useEffect(() => {
